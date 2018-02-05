@@ -60,4 +60,221 @@
             <Eval id="housetype">false</Eval>
         </Evals>
     </Fact>
+    <Fact id="6">
+        <Description value="District 6"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">true</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="7">
+        <Description value="District 7"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">false</Eval>
+            <Eval id="lifestyle">true</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="8">
+        <Description value="District 8"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">false</Eval>
+            <Eval id="lifestyle">true</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="9">
+        <Description value="District 9"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">false</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="10">
+        <Description value="District 10 "/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">false</Eval>
+            <Eval id="lifestyle">true</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="11">
+        <Description value="District 11"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">false</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">false</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">true</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="12">
+        <Description value="District 12"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="side">false</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="13">
+        <Description value="District 13"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">false</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="14">
+        <Description value="District 14"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">false</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="15">
+        <Description value="District 15"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">false</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="16">
+        <Description value="District 16"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="17">
+        <Description value="District 17"/>
+        <Evals>
+            <Eval id="money">false</Eval> //draga vagy nem
+            <Eval id="side">true</Eval> //pest vagy nem
+            <Eval id="family">true</Eval> // csalad vagy nem
+            <Eval id="traffic">true</Eval> // auto vagy nem
+            <Eval id="public security">true</Eval> // biztonsag v
+            <Eval id="lifestyle">false</Eval> // nyusgo v nem
+            <Eval id="housetype">true</Eval> // haz v lakas
+        </Evals>
+    </Fact>
+    <Fact id="18">
+        <Description value="District 18"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">true</Eval> 
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval> 
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="19">
+        <Description value="District 19"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">false</Eval>
+            <Eval id="public security">false</Eval> 
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">false</Eval> 
+        </Evals>
+    </Fact>
+    <Fact id="21">
+        <Description value="District 20"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval> 
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">false</Eval> 
+        </Evals>
+    </Fact>
+     <Fact id="21">
+        <Description value="District 21"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval> 
+            <Eval id="lifestyle">true</Eval>
+            <Eval id="housetype">false</Eval> 
+        </Evals>
+    </Fact>
+    <Fact id="22">
+        <Description value="District 22"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">false</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="23">
+        <Description value="District 23"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">true</Eval>
+        </Evals>
+    </Fact>
+    </Facts>
     
