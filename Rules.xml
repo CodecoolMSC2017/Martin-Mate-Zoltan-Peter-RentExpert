@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Rules>
     <Rule id="money">
-        <Question>Can you pay 200.000 HUF for a flat/house per month?</Question>
+        <Question>Can you pay more than 200.000 HUF for a flat/house per month?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
