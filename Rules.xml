@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules>
+    <Rule id="money">
+        <Question>Can you pay 200.000 HUF for a flat/house per month?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="side">
+        <Question>Would you like to live in Pest / Buda side?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="pest"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="buda"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="family">
+        <Question>What opportunity is the most important?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="playground, hospital, kindergarten, school, supermarket"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="bar, brothel, grocery, fast food"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="traffic">
+        <Question>Do you have a car?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+     <Rule id="public security">
+        <Question>Is public security important factor for you?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="lifestyle">
+        <Question>Do you prefer bustle or calmness?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="bustle"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="calmness"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="house type">
+        <Question>Do you prefer a flat or a house with garden?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="house"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="flat"/>
+            </Selection>
+        </Answer>
+    </Rule>
+</Rules>
