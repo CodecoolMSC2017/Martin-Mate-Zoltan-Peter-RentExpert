@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Facts>
+    <Fact id="1">
+        <Description value="District 1"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="side">false</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">false</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="2">
+        <Description value="District 2"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="side">false</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="3">
+        <Description value="District 3"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">false</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">false</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="4">
+        <Description value="District 4"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">true</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="5">
+        <Description value="District 5"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="side">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="traffic">false</Eval>
+            <Eval id="public security">false</Eval>
+            <Eval id="lifestyle">true</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    
