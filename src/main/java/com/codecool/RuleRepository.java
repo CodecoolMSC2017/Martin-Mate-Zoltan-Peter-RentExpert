@@ -3,7 +3,11 @@ package com.codecool;
 import java.util.ArrayList;
 
 public class RuleRepository {
-    ArrayList<Question> questions;
+    private ArrayList<Question> questions;
+
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
 
     public RuleRepository() {
         questions = new ArrayList<>();
