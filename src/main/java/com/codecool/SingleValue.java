@@ -1,5 +1,7 @@
 package com.codecool;
 
+import java.util.List;
+
 public class SingleValue extends Value {
     private String param;
     private List<String> params;
