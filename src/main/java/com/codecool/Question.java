@@ -35,7 +35,15 @@ public class Question {
         this.answer = answer;
     }
 
-    public void getEvalutedAnswer(String input) {
+    public boolean getEvalutedAnswer(String input) {
+        int answers = answer.getValues().size();
+        if (answer.evaluateAnswerByInput(input)) {
+            for (int i = 0; i < answers) {
+                if (answers[i] instanceof SingleValue) {
+
+                }
+            }
+        }
 
     }
 }

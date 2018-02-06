@@ -11,21 +11,20 @@ public class Answer {
         values.add(value);
     }
 
+    public Answer(List<Value> values) {
+        this.values = values;
+    }
+
+    public List<Value> getValues() {
+        return values;
+    }
+
     public boolean evaluateAnswerByInput(String input) {
-        boolean contains = false;
-        try {
-            for (Value value: values) {
-                if (value.getInputPattern().contains(input)) {
-                    contains = true;
-                    break;
-                }
+        for (Value value: values) {
+            if (value.getInputPattern().contains(input)) {
+                return true;
             }
-            return contains;
-        } catch (InputMismatchException ime) {
-            System.out.println("Text (string) please!");
         }
         return false;
     }
-
-
 }
