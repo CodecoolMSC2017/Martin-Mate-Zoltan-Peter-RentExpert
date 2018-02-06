@@ -1,12 +1,15 @@
 package com.codecool;
 
-public class MultipleValue extends Value {
-    private List<string> params;
+import java.util.List;
 
-    public MultipleValue(List<string> params) {
+public class MultipleValue extends Value {
+    private List<String> params;
+
+    public MultipleValue(List<String> params) {
         this.params = params;
     }
 
     public List<String> getInputPattern() {
         return params;
+    }
 }
