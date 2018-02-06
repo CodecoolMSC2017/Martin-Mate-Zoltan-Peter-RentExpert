@@ -8,27 +8,40 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class RuleParser extends XMLParser {
 
     private RuleRepository ruleRepository;
 
+    private ArrayList<Element> rules;
+
+
     public RuleParser(String rulesXml) throws ParserConfigurationException, SAXException, IOException {
         loadXMLDocument(rulesXml);
         this.ruleRepository = new RuleRepository();
-        for (Element e : getElements()) {
-           // this.ruleRepository.addQuestion(toQuestion(e));
+    }
+
+    private void getElements() {
+        NodeList nList = dom.getElementsByTagName("Rule");
+
+        for (int i = 0; i < nList.getLength();i++) {
+            Node nNode = nList.item(i);
+
+
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element e = (Element) nNode;
+                //e.getElementsByTagName("Question");
+                rules.add(e);
+
+            }
         }
     }
 
-    private Element[] getElements() {
-        dom.getElementsByTagName("Rule");
-        return new Element[0];
+    private String getQuestion(int i) {
+            return rules.get(i).getElementsByTagName("Question").item(0).getTextContent();
     }
 
-    private Question toQuestion(Element e) {
-        return null;
-    }
 
     public RuleRepository getRuleRepository() {
         return ruleRepository;
