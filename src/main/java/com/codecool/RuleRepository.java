@@ -16,4 +16,9 @@ public class RuleRepository {
     public void addQuestion(Question question) {
         questions.add(question);
     }
+
+    public Iterator<Question> getIterator() {
+        Iterator questionIterator = new QuestionIterator(questions);
+        return questionIterator;
+    }
 }
