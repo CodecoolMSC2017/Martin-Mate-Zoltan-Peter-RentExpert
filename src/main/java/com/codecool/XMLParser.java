@@ -7,7 +7,7 @@ import java.io.File;
 
 public abstract class XMLParser {
 
-    public Document reader(String filename) {
+    public Document loadXMLDocument(String filename) {
 
         try {
 
