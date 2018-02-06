@@ -15,16 +15,27 @@ public class Question {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getQuestion() {
         return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public Answer getAnswer() {
         return answer;
     }
 
-    public getEvalutedAnswer(String input) {
+    public void setAnswer(Answer answer) {
+        this.answer = answer;
+    }
 
-        }
+    public void getEvalutedAnswer(String input) {
+
     }
 }
