@@ -3,9 +3,9 @@ package com.codecool;
 import java.util.ArrayList;
 
 public class FactRepository {
-    private ArrayList<Question> facts;
+    private ArrayList<Fact> facts;
 
-    public ArrayList<Question> getFacts() {
+    public ArrayList<Fact> getFacts() {
         return facts;
     }
 
