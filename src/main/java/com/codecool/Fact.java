@@ -14,6 +14,10 @@ public class Fact {
         this.evals = evals;
     }
 
+    public HashMap<String, Boolean> getEvals() {
+        return evals;
+    }
+
     public Set<String> getIdSet() {
         return evals.keySet();
     }

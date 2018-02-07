@@ -12,7 +12,7 @@ public class ESProvider {
     private Iterator<Question> questionIterator;
     private Iterator<Fact> factIterator;
 
-    private Map<String,Boolean> userAnswers = new HashMap<>();
+    private Map<String, Boolean> userAnswers = new HashMap<>();
 
     public ESProvider(RuleParser ruleParser, FactParser factParser) {
         this.ruleRepository = ruleParser.getRuleRepository();
@@ -24,15 +24,28 @@ public class ESProvider {
     }
 
     public void collectAnswers() {
-        while(questionIterator.hasNext()) {
+        while (questionIterator.hasNext()) {
             Question q = questionIterator.next();
             System.out.println(q.getQuestion());
-            System.out.println("Answers: "+q.getAnswer().getValues());
+            System.out.println("Answers: " + q.getAnswer().getValues());
             Scanner sc = new Scanner(System.in);
             String userAnswer = "yes"; //sc.nextLine ÁTKELL IRNI SZKENNERGENYORA a teszt miatt "yes"
 
             //userAnswers.put(q.getId(),q.getEvalutedAnswer(userAnswer)); meg nem jo!
         }
         System.out.println(userAnswers);
+    }
+
+    public String evaluate() {
+        HashMap<String, Boolean> answers = new HashMap<>();
+        Set<Boolean> evaluatedAnswers = (Set<Boolean>) answers.values();
+
+        for (Fact fact : facts) {
+            Set<Boolean> actualFactEvals = (Set<Boolean>) fact.getEvals().values();
+            if (actualFactEvals.containsAll(evaluatedAnswers)) {
+                return fact.getDescription();
+            }
+        }
+        return null;
     }
 }
