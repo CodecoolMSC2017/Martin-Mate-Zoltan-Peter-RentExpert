@@ -2,6 +2,7 @@ package com.codecool;
 
 import javafx.css.Rule;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class ESProvider {
@@ -9,15 +10,19 @@ public class ESProvider {
     private FactRepository factRepository;
     private List<Question> questions;
     private List<Fact> facts;
-    private QuestionIterator qi;
-    private FactIterator fi;
+    private Iterator questionIterator;
+    private Iterator factIterator;
 
     public ESProvider(RuleParser ruleParser, FactParser factParser) {
         this.ruleRepository = ruleParser.getRuleRepository();
         this.factRepository = factParser.getFactRepository();
         this.questions = ruleRepository.getQuestions();
         this.facts = factRepository.getFacts();
-        this.qi = new QuestionIterator(questions);
-        this.fi = new FactIterator(facts);
+        this.questionIterator = ruleRepository.getIterator();
+        this.factIterator = factRepository.getIterator();
+    }
+
+    public void collectAnswers() {
+
     }
 }
