@@ -1,6 +1,7 @@
 package com.codecool;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class RuleRepository {
     private ArrayList<Question> questions;
