@@ -11,7 +11,6 @@ import java.util.*;
 
 public class FactParser extends XMLParser {
     private FactRepository factRepository;
-    private Set<String> idEvals;
 
     private List<Element> facts = new ArrayList<>();
 
@@ -20,7 +19,7 @@ public class FactParser extends XMLParser {
         this.factRepository = new FactRepository();
         getElements();
         for (Element factElement : facts) {
-            createFact(factElement);
+            factRepository.addFact(createFact(factElement));
         }
     }
 
@@ -28,20 +27,19 @@ public class FactParser extends XMLParser {
         String id = factElement.getAttribute("id");
         Element descriptionElement = (Element)factElement.getElementsByTagName("Description").item(0);
         String description = descriptionElement.getAttribute("value");
-        //Fact fact = new Fact(id,description);
         Element evalsElement = (Element)factElement.getElementsByTagName("Evals").item(0);
         NodeList evalList = evalsElement.getElementsByTagName("Eval");
         Element evalElement;
+        HashMap <String,Boolean> evalMap = new HashMap<>();
         for (int i = 0;i < evalList.getLength(); i++) {
             evalElement = (Element)evalsElement.getElementsByTagName("Eval").item(i);
             String evalID = evalElement.getAttribute("id");
-            String evalValue = evalsElement.getElementsByTagName("Eval").item(i).getTextContent();
-            System.out.println(evalID);
-            System.out.println(evalValue);
+            Boolean evalValue = Boolean.valueOf(evalsElement.getElementsByTagName("Eval").item(i).getTextContent());
+            evalMap.put(evalID,evalValue);
         }
-
-        return null;
+        return new Fact(id,description,evalMap);
     }
+
 
     private void getElements() {
         NodeList nList = dom.getElementsByTagName("Fact");
