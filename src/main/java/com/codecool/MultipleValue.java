@@ -18,4 +18,9 @@ public class MultipleValue extends Value {
     public boolean getSelectionType() {
         return selectionType;
     }
+
+    @Override
+    public String toString() {
+        return params.get(0);
+    }
 }
