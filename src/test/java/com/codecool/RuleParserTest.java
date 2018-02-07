@@ -23,7 +23,7 @@ class RuleParserTest {
         Iterator<Question> iterator = ruleRepository.getIterator();
         while (iterator.hasNext()) {
             Question question = iterator.next();
-            assertEquals(question.getId(), "asd");
+            assertEquals(question.getId(), "money");
             actualCount++;
         }
         assertEquals(0, actualCount);

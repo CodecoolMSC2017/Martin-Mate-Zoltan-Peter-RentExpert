@@ -26,10 +26,10 @@
         <Question>What opportunity is the most important?</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="playground, hospital, kindergarten, school, supermarket"/>
+                <MultipleValue value="playground,hospital,kindergarten,school,supermarket"/>
             </Selection>
             <Selection value="false">
-                <MultipleValue value="bar, brothel, grocery, fast food"/>
+                <MultipleValue value="bar,brothel,grocery,fast food"/>
             </Selection>
         </Answer>
     </Rule>

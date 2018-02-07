@@ -53,14 +53,36 @@ public class RuleParser extends XMLParser {
         if(selectionElement.getChildNodes().item(1).getNodeName().equals("SingleValue")) {
             Element singleValueElement = (Element) selectionElement.getElementsByTagName("SingleValue").item(0);
             SingleValue sv = new SingleValue(singleValueElement.getAttribute("value"),true);
+
+            Element selectionElement2 = (Element)answerElement.getElementsByTagName("Selection").item(1);
+
+            Element singleValueElement2 = (Element) selectionElement2.getElementsByTagName("SingleValue").item(0);
+            SingleValue sv2 = new SingleValue(singleValueElement2.getAttribute("value"),false);
+
             values.add(sv);
+            values.add(sv2);
         }
         else if(selectionElement.getChildNodes().item(1).getNodeName().equals("MultipleValue")){
             Element multipleValueElement = (Element) selectionElement.getElementsByTagName("MultipleValue").item(0);
-            List<String> multiValue =new ArrayList<>();
-            multiValue.add(multipleValueElement.getAttribute("value"));
-            MultipleValue mv = new MultipleValue(multiValue,true);
-            values.add(mv);
+            String[] multiVal1= multipleValueElement.getAttribute("value").split(",");
+            List<String> multiValue1 =new ArrayList<>();
+            for (String value:multiVal1) {
+                multiValue1.add(value);
+            }
+
+            Element selectionElement2 = (Element)answerElement.getElementsByTagName("Selection").item(1);
+            Element multipleValueElement2 =(Element) selectionElement2.getElementsByTagName("MultipleValue").item(0);
+            String[] multiVal2 =multipleValueElement2.getAttribute("value").split(",");
+            List<String> multiValue2 =new ArrayList<>();
+            for (String value:multiVal2) {
+                multiValue2.add(value);
+            }
+
+            MultipleValue mv1 = new MultipleValue(multiValue1,true);
+            MultipleValue mv2 = new MultipleValue(multiValue2,false);
+
+            values.add(mv1);
+            values.add(mv2);
         }
         Answer ans = new Answer(values);
         return ans;
