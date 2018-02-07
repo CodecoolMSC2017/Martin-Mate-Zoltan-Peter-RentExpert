@@ -37,8 +37,7 @@ public class ESProvider {
     }
 
     public String evaluate() {
-        HashMap<String, Boolean> answers = new HashMap<>();
-        Set<Boolean> evaluatedAnswers = (Set<Boolean>) answers.values();
+        Set<Boolean> evaluatedAnswers = (Set<Boolean>) userAnswers.values();
 
         for (Fact fact : facts) {
             Set<Boolean> actualFactEvals = (Set<Boolean>) fact.getEvals().values();
