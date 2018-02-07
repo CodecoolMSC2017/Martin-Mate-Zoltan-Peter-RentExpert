@@ -1,6 +1,5 @@
 package com.codecool;
 
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -23,7 +22,7 @@ public class RuleParser extends XMLParser {
         this.ruleRepository = new RuleRepository();
         getElements();
         for (Element ruleElement : rules) {
-            createQuestion(ruleElement);
+            ruleRepository.addQuestion(createQuestion(ruleElement));
         }
     }
 
