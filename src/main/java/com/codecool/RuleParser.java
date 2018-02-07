@@ -49,7 +49,22 @@ public class RuleParser extends XMLParser {
     }
 
     private Answer createAnswer(Element answerElement) {
-        return null;
+        List<Value> values= new ArrayList<>();
+        Element selectionElement = (Element)answerElement.getElementsByTagName("Selection").item(0);
+        if(selectionElement.getChildNodes().item(1).getNodeName().equals("SingleValue")) {
+            Element singleValueElement = (Element) selectionElement.getElementsByTagName("SingleValue").item(0);
+            SingleValue sv = new SingleValue(singleValueElement.getAttribute("value"),true);
+            values.add(sv);
+        }
+        else if(selectionElement.getChildNodes().item(1).getNodeName().equals("MultipleValue")){
+            Element multipleValueElement = (Element) selectionElement.getElementsByTagName("MultipleValue").item(0);
+            List<String> multiValue =new ArrayList<>();
+            multiValue.add(multipleValueElement.getAttribute("value"));
+            MultipleValue mv = new MultipleValue(multiValue,true);
+            values.add(mv);
+        }
+        Answer ans = new Answer(values);
+        return ans;
     }
 
     public RuleRepository getRuleRepository() {

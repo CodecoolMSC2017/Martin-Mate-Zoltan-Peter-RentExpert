@@ -1,10 +1,11 @@
 package com.codecool;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SingleValue extends Value {
     private String param;
-    private List<String> params;
+    private List<String> params = new ArrayList<>();
     private boolean selectionType;
 
     public SingleValue(String param, Boolean selectionType) {

@@ -59,10 +59,10 @@
         <Question>Do you prefer bustle or calmness?</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="bustle"/>
+                <SingleValue value="bustle"/>
             </Selection>
             <Selection value="false">
-                <MultipleValue value="calmness"/>
+                <SingleValue value="calmness"/>
             </Selection>
         </Answer>
     </Rule>
@@ -70,10 +70,10 @@
         <Question>Do you prefer a flat or a house with garden?</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="house"/>
+                <SingleValue value="house"/>
             </Selection>
             <Selection value="false">
-                <MultipleValue value="flat"/>
+                <SingleValue value="flat"/>
             </Selection>
         </Answer>
     </Rule>
