@@ -12,7 +12,7 @@ public class Main {
         ESProvider ep = new ESProvider(new RuleParser("Rules"),new FactParser("Facts"));
         try {
             ep.collectAnswers();
-            if (ep.evaluate() == null) {
+            if (ep.evaluate().equals("")) {
                 System.out.println("\nThere is no proper district for you!");
             } else {
                 System.out.println("\nYour best possible choice is: " + ep.evaluate());
