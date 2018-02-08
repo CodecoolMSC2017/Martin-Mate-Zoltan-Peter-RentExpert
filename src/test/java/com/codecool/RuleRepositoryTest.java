@@ -13,10 +13,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class RuleParserTest {
+class RuleRepositoryTest {
 
     @Test
-    void testRuleParser() throws ParserConfigurationException, SAXException, IOException {
+    void testRuleRepository() throws ParserConfigurationException, SAXException, IOException {
         RuleRepository ruleRep = new RuleRepository();
         List<Value> testValues = new ArrayList<Value>();
         SingleValue testValue = new SingleValue("test", true);
