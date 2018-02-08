@@ -49,28 +49,53 @@ public class ESProvider {
 
     public String evaluate() {
         List<Boolean> evaluatedAnswers =new ArrayList<>();
-        evaluatedAnswers.add(userAnswers.get("money"));
-        evaluatedAnswers.add(userAnswers.get("side"));
-        evaluatedAnswers.add(userAnswers.get("family"));
-        evaluatedAnswers.add(userAnswers.get("traffic"));
-        evaluatedAnswers.add(userAnswers.get("public security"));
-        evaluatedAnswers.add(userAnswers.get("lifestyle"));
-        evaluatedAnswers.add(userAnswers.get("housetype"));
+        if (userAnswers.get("money").equals(false)) {
+            evaluatedAnswers.add(userAnswers.get("money"));
+            evaluatedAnswers.add(userAnswers.get("side"));
+            evaluatedAnswers.add(userAnswers.get("family"));
+            evaluatedAnswers.add(userAnswers.get("traffic"));
+            evaluatedAnswers.add(userAnswers.get("public security"));
+            evaluatedAnswers.add(userAnswers.get("lifestyle"));
+            evaluatedAnswers.add(userAnswers.get("housetype"));
+        }
+        else {
+            evaluatedAnswers.add(userAnswers.get("side"));
+            evaluatedAnswers.add(userAnswers.get("family"));
+            evaluatedAnswers.add(userAnswers.get("traffic"));
+            evaluatedAnswers.add(userAnswers.get("public security"));
+            evaluatedAnswers.add(userAnswers.get("lifestyle"));
+            evaluatedAnswers.add(userAnswers.get("housetype"));
+        }
 
-
+        String districts ="";
         for (Fact fact : facts) {
             List<Boolean> actualFactEvals =new ArrayList<>();
-            actualFactEvals.add(fact.getEvals().get("money"));
-            actualFactEvals.add(fact.getEvals().get("side"));
-            actualFactEvals.add(fact.getEvals().get("family"));
-            actualFactEvals.add(fact.getEvals().get("traffic"));
-            actualFactEvals.add(fact.getEvals().get("public security"));
-            actualFactEvals.add(fact.getEvals().get("lifestyle"));
-            actualFactEvals.add(fact.getEvals().get("housetype"));
+            if(userAnswers.get("money").equals(false)) {
+                actualFactEvals.add(fact.getEvals().get("money"));
+                actualFactEvals.add(fact.getEvals().get("side"));
+                actualFactEvals.add(fact.getEvals().get("family"));
+                actualFactEvals.add(fact.getEvals().get("traffic"));
+                actualFactEvals.add(fact.getEvals().get("public security"));
+                actualFactEvals.add(fact.getEvals().get("lifestyle"));
+                actualFactEvals.add(fact.getEvals().get("housetype"));
+            }
+            else {
+                actualFactEvals.add(fact.getEvals().get("side"));
+                actualFactEvals.add(fact.getEvals().get("family"));
+                actualFactEvals.add(fact.getEvals().get("traffic"));
+                actualFactEvals.add(fact.getEvals().get("public security"));
+                actualFactEvals.add(fact.getEvals().get("lifestyle"));
+                actualFactEvals.add(fact.getEvals().get("housetype"));
+            }
             if (actualFactEvals.equals(evaluatedAnswers)) {
-                return fact.getDescription();
+                if (districts.length() < 1 ) {
+                    districts += fact.getDescription();
+                }
+                else {
+                    districts += " or " + fact.getDescription();
+                }
             }
         }
-        return null;
+        return districts;
     }
 }
