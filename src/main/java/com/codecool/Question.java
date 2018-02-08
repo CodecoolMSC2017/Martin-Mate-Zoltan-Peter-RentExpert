@@ -1,12 +1,13 @@
 package com.codecool;
 
+import java.sql.SQLOutput;
 import java.util.HashMap;
 
 public class Question {
     private String id;
     private String question;
     private Answer answer;
-    private HashMap<String, Boolean> answerToQuestion;
+    private HashMap<String, Boolean> answerToQuestion = new HashMap<>();
 
     public Question(String id, String question, Answer answer) {
         this.id = id;
@@ -42,9 +43,12 @@ public class Question {
         if (answer.evaluateAnswerByInput(input)) {
             for (Value value: answer.getValues()) {
                 if (value instanceof SingleValue) {
-                    if (value.getInputPattern().get(0).equals(input))
-                        answerToQuestion.put(id, value.getSelectionType());
-                        return value.getSelectionType();
+                    for (int i = 0;i < answer.getValues().size();i++) {
+                        if (input.equals(answer.getValues().get(i).toString())) {
+                            answerToQuestion.put(id, answer.getValues().get(i).getSelectionType());
+                            return answer.getValues().get(i).getSelectionType();
+                        }
+                    }
                 } else {
                     for (int i = 0; i < value.getInputPattern().size(); i++) {
                         if (input.equals(value.getInputPattern().get(i))) {

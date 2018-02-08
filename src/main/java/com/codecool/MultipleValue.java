@@ -22,7 +22,7 @@ public class MultipleValue extends Value {
     @Override
     public String toString() {
         String param ="";
-        
+
         for (int i = 0; i < params.size();i++) {
             if (i == params.size()-1) {
                 param += params.get(i);
