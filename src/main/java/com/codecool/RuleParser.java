@@ -26,7 +26,7 @@ public class RuleParser extends XMLParser {
         }
     }
 
-    private void getElements() {
+    public void getElements() {
         NodeList nList = dom.getElementsByTagName("Rule");
 
         for (int i = 0; i < nList.getLength();i++) {
@@ -40,14 +40,14 @@ public class RuleParser extends XMLParser {
         }
     }
 
-    private Question createQuestion(Element ruleElement){
+    public Question createQuestion(Element ruleElement){
             String id = ruleElement.getAttribute("id");
             String question = ruleElement.getElementsByTagName("Question").item(0).getTextContent();
             Element answerElement = (Element)ruleElement.getElementsByTagName("Answer").item(0);
             return new Question(id, question, createAnswer(answerElement));
     }
 
-    private Answer createAnswer(Element answerElement) {
+    public Answer createAnswer(Element answerElement) {
         List<Value> values= new ArrayList<>();
         Element selectionElement = (Element)answerElement.getElementsByTagName("Selection").item(0);
         if(selectionElement.getChildNodes().item(1).getNodeName().equals("SingleValue")) {

@@ -23,7 +23,7 @@ public class FactParser extends XMLParser {
         }
     }
 
-    private Fact createFact(Element factElement) {
+    public Fact createFact(Element factElement) {
         String id = factElement.getAttribute("id");
         Element descriptionElement = (Element)factElement.getElementsByTagName("Description").item(0);
         String description = descriptionElement.getAttribute("value");
@@ -41,7 +41,7 @@ public class FactParser extends XMLParser {
     }
 
 
-    private void getElements() {
+    public void getElements() {
         NodeList nList = dom.getElementsByTagName("Fact");
 
         for (int i = 0; i < nList.getLength();i++) {

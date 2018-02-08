@@ -1,1 +1,27 @@
-<Facts><Fact id="1"><Description value="District 1"/><Evals><Eval id="money">true</Eval><Eval id="side">false</Eval><Eval id="family">true</Eval><Eval id="traffic">false</Eval><Eval id="public security">true</Eval><Eval id="lifestyle">false</Eval><Eval id="housetype">false</Eval></Evals></Fact><Fact id="2"><Description value="District 2"/><Evals><Eval id="money">true</Eval><Eval id="side">false</Eval><Eval id="family">true</Eval><Eval id="traffic">true</Eval><Eval id="public security">true</Eval><Eval id="lifestyle">false</Eval><Eval id="housetype">true</Eval></Evals></Fact></Facts>
+<?xml version="1.0" encoding="utf-8"?>
+<Facts>
+    <Fact id="1">
+        <Description value="TestDistrict 1"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="side">false</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="traffic">false</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="2">
+        <Description value="TestDistrict 2"/>
+        <Evals>
+            <Eval id="chicken">true</Eval>
+            <Eval id="body">false</Eval>
+            <Eval id="király">true</Eval>
+            <Eval id="bőrmellény">true</Eval>
+            <Eval id="public security">true</Eval>
+            <Eval id="lifestyle">false</Eval>
+            <Eval id="housetype">true</Eval>
+        </Evals>
+    </Fact>
+    </Facts>
