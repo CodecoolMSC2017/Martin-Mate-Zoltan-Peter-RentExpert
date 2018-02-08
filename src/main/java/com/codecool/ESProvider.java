@@ -23,15 +23,27 @@ public class ESProvider {
         this.factIterator = factRepository.getIterator();
     }
 
-    public void collectAnswers() {
+    public void collectAnswers() throws Exception {
         while (questionIterator.hasNext()) {
             Question q = questionIterator.next();
             System.out.println(q.getQuestion());
-            System.out.println("Answers: " + q.getAnswer().getValues());
+            System.out.println("Valid answers: " + q.getAnswer().getValues());
             Scanner sc = new Scanner(System.in);
-            String userAnswer = sc.nextLine();
+            int counter = 0;
+            while (counter < 3) {
+                String userAnswer = sc.nextLine();
+                if (counter == 2) {
+                    throw new Exception();
+                }
+                if (!(q.getAnswer().evaluateAnswerByInput(userAnswer))) {
+                    System.out.println("Invalid answer, please choose from the given ones!");
+                    counter++;
+                } else {
+                    userAnswers.put(q.getId(),q.getEvalutedAnswer(userAnswer));
+                    break;
+                }
+            }
 
-            userAnswers.put(q.getId(),q.getEvalutedAnswer(userAnswer));
         }
     }
 
