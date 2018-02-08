@@ -15,10 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RuleRepositoryTest {
 
+    private RuleRepository ruleRep;
+    @BeforeEach
+    void setUp(){
+        ruleRep = new RuleRepository();
+    }
     @Test
     void testRuleRepository() throws ParserConfigurationException, SAXException, IOException {
-        RuleRepository ruleRep = new RuleRepository();
-        List<Value> testValues = new ArrayList<Value>();
+        List<Value> testValues = new ArrayList<>();
         SingleValue testValue = new SingleValue("test", true);
         testValues.add(testValue);
         Question q = new Question("1","testQuestion", new Answer(testValues));
