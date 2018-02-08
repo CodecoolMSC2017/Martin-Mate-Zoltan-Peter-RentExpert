@@ -13,9 +13,10 @@ public class Main {
         try {
             ep.collectAnswers();
             if (ep.evaluate() == null) {
-                System.out.println("There is no proper district for you!");
+                System.out.println("\nThere is no proper district for you!");
+            } else {
+                System.out.println("\nYour best possible choice is: " + ep.evaluate());
             }
-            System.out.println("\nYour best possible choice is: " + ep.evaluate());
         } catch (Exception e) {
             System.out.println("Invalid operation!");
         }
