@@ -10,7 +10,14 @@ public class Main {
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
 
         ESProvider ep = new ESProvider(new RuleParser("Rules"),new FactParser("Facts"));
-        ep.collectAnswers();
-        System.out.println(ep.evaluate());
+        try {
+            ep.collectAnswers();
+            if (ep.evaluate() == null) {
+                System.out.println("There is no proper district for you!");
+            }
+            System.out.println("\nYour best possible choice is: " + ep.evaluate());
+        } catch (Exception e) {
+            System.out.println("Invalid operation!");
+        }
     }
 }
