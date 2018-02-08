@@ -14,6 +14,6 @@ class ESProviderTest {
         RuleParser rp = new RuleParser("Rules");
         FactParser fp = new FactParser("Facts");
         ESProvider esp = new ESProvider(rp,fp);
-        esp.collectAnswers();
+        //esp.collectAnswers();
     }
 }
