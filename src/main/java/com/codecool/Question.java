@@ -39,7 +39,7 @@ public class Question {
         this.answer = answer;
     }
 
-    public boolean getEvalutedAnswer(String input) { // függvényhívásnál 3-4 bekérés (counter számláló változó segítségével), ha sikertelen a próbálkozás akkor InvalidOperationException
+    public boolean getEvalutedAnswer(String input) {
         if (answer.evaluateAnswerByInput(input)) {
             for (Value value: answer.getValues()) {
                 if (value instanceof SingleValue) {
