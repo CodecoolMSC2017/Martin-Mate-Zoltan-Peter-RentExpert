@@ -12,11 +12,11 @@ import java.util.function.BooleanSupplier;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FactIteratorTest {
-    List<Fact> testList;
-    List<Fact> emptyTestList;
-    HashMap<String, Boolean> testMap;
-    FactIterator fi1;
-    FactIterator fi2;
+    private List<Fact> testList;
+    private List<Fact> emptyTestList;
+    private HashMap<String, Boolean> testMap;
+    private FactIterator fi1;
+    private FactIterator fi2;
 
     @BeforeEach
     void setUp() {
